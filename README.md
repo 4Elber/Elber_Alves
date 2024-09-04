@@ -4,6 +4,8 @@ Pagina da disciplina de engenharia de software
 
 # 1. Decrição do sistema
 
+
+---
 # 2. Diagramas
 
 ## 2.1 Diagramas de classe
