@@ -17,7 +17,7 @@ Página da disciplina de Engenharia de Software
 - [13. Considerações sobre segurança](#13-considerações-sobre-segurança)
 - [14. Manutenção e instalação](#14-manutenção-e-instalação)
 - [15. Glossário](#15-glossário)
-- [16. Script SQl](#16-script-sql)
+- [16. Script SQL](#16-script-sql)
 
 
 # 1. Introdução
@@ -72,4 +72,4 @@ Descrição do sistema e suas relações
 # 15. Glossário
 
 ---
-# 16. Script SQl
+# 16. Script SQL
