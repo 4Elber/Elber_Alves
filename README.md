@@ -2,7 +2,7 @@
 Pagina da disciplina de engenharia de software
 
 
-# 1. Decrição do sistema
+# 1. Descrição do sistema
 
 
 ---
