@@ -81,6 +81,12 @@ O projeto a seguir apresenta um sistema desenvolvido para uma pethop. A empresa 
 
 25. O petshop oferece banho a gansos da Finlandia.
 
+26. O petshop ajuda o dono na domesticação.
+
+27. O petshop preenche a cardeneta de vacinação.
+
+28. O petshop faz designs na penugem.
+
 ---
 # 3. Visão geral do sistema
 
