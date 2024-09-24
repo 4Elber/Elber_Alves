@@ -302,7 +302,7 @@ classDiagram
 
 ## 6.1. Casos de uso
 
-
+![Casos de uso](https://raw.githubusercontent.com/4Elber/Elber_Alves/refs/heads/main/Diagrama%20de%20casos%20de%20uso.png?token=GHSAT0AAAAAACW54UQELHX23ENY6Z4GQ2H4ZXTLWOA)
 
 ---
 # 7. Diagrama de componentes
