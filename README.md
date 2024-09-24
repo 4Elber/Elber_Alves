@@ -11,6 +11,65 @@ Página da disciplina de Engenharia de Software
 - [5. Diagrama de classe](#5-diagrama-de-classe)
 - [6. Casos de uso](#6-casos-de-uso)
   - [6.1. Casos de uso](#61-casos-de-uso)
+  - [6.2. Historia de Usuario](#62-historia-de-usuario)
+    - [Clínica Veterinária](#clínica-veterinária)
+      - [1. Cadastro de Cliente e Animal](#1-cadastro-de-cliente-e-animal)
+      - [2. Informar Condições do Animal](#2-informar-condições-do-animal)
+      - [3. Informar Tipo de Ração do Animal](#3-informar-tipo-de-ração-do-animal)
+      - [4. Informar Hábitos do Animal](#4-informar-hábitos-do-animal)
+      - [5. Atendimento por Vários Veterinários](#5-atendimento-por-vários-veterinários)
+      - [6. Atendimento Agendado](#6-atendimento-agendado)
+      - [7. Ficha e Prontuário do Animal](#7-ficha-e-prontuário-do-animal)
+      - [8. Agendar Atendimentos Futuros](#8-agendar-atendimentos-futuros)
+      - [9. Receita Após o Atendimento](#9-receita-após-o-atendimento)
+      - [10. Atendimento pelo Atendente](#10-atendimento-pelo-atendente)
+      - [11. Fila de Espera](#11-fila-de-espera)
+      - [12. Entrevista com o Dono do Animal](#12-entrevista-com-o-dono-do-animal)
+      - [13. Preencher Formulário com Entrevista](#13-preencher-formulário-com-entrevista)
+      - [14. Exame do Animal e Prontuário](#14-exame-do-animal-e-prontuário)
+      - [15. Receita Dependendo do Exame](#15-receita-dependendo-do-exame)
+    - [Petshop](#petshop)
+      - [16. Venda de Ração para Pássaros](#16-venda-de-ração-para-pássaros)
+      - [17. Venda de Sal para Boi](#17-venda-de-sal-para-boi)
+      - [18. Venda de Vacina para Animais Adultos](#18-venda-de-vacina-para-animais-adultos)
+      - [19. Banho e Tosa para Animais de Fazenda](#19-banho-e-tosa-para-animais-de-fazenda)
+      - [20. Vacina para Animais com Raiva](#20-vacina-para-animais-com-raiva)
+      - [21. Limpeza de Pata de Camelo](#21-limpeza-de-pata-de-camelo)
+      - [22. Banho em Gansos da Finlândia](#22-banho-em-gansos-da-finlândia)
+      - [23. Ajuda na Domesticação](#23-ajuda-na-domesticação)
+      - [24. Preenchimento de Caderneta de Vacinação](#24-preenchimento-de-caderneta-de-vacinação)
+      - [25. Design na Penugem](#25-design-na-penugem)
+      - [26. Pagamento com Saco de Algodão](#26-pagamento-com-saco-de-algodão)
+      - [27. Pagamento com Galinhas Vivas](#27-pagamento-com-galinhas-vivas)
+    - [Clínica Veterinária](#clínica-veterinária-1)
+      - [1. Cadastro de Cliente e Animal](#1-cadastro-de-cliente-e-animal-1)
+      - [2. Informar Condições do Animal](#2-informar-condições-do-animal-1)
+      - [3. Informar Tipo de Ração do Animal](#3-informar-tipo-de-ração-do-animal-1)
+      - [4. Informar Hábitos do Animal](#4-informar-hábitos-do-animal-1)
+      - [5. Atendimento por Vários Veterinários](#5-atendimento-por-vários-veterinários-1)
+      - [6. Atendimento Agendado](#6-atendimento-agendado-1)
+      - [7. Ficha e Prontuário do Animal](#7-ficha-e-prontuário-do-animal-1)
+      - [8. Agendar Atendimentos Futuros](#8-agendar-atendimentos-futuros-1)
+      - [9. Receita Após o Atendimento](#9-receita-após-o-atendimento-1)
+      - [10. Atendimento pelo Atendente](#10-atendimento-pelo-atendente-1)
+      - [11. Fila de Espera](#11-fila-de-espera-1)
+      - [12. Entrevista com o Dono do Animal](#12-entrevista-com-o-dono-do-animal-1)
+      - [13. Preencher Formulário com Entrevista](#13-preencher-formulário-com-entrevista-1)
+      - [14. Exame do Animal e Prontuário](#14-exame-do-animal-e-prontuário-1)
+      - [15. Receita Dependendo do Exame](#15-receita-dependendo-do-exame-1)
+    - [Petshop](#petshop-1)
+      - [16. Venda de Ração para Pássaros](#16-venda-de-ração-para-pássaros-1)
+      - [17. Venda de Sal para Boi](#17-venda-de-sal-para-boi-1)
+      - [18. Venda de Vacina para Animais Adultos](#18-venda-de-vacina-para-animais-adultos-1)
+      - [19. Banho e Tosa para Animais de Fazenda](#19-banho-e-tosa-para-animais-de-fazenda-1)
+      - [20. Vacina para Animais com Raiva](#20-vacina-para-animais-com-raiva-1)
+      - [21. Limpeza de Pata de Camelo](#21-limpeza-de-pata-de-camelo-1)
+      - [22. Banho em Gansos da Finlândia](#22-banho-em-gansos-da-finlândia-1)
+      - [23. Ajuda na Domesticação](#23-ajuda-na-domesticação-1)
+      - [24. Preenchimento de Caderneta de Vacinação](#24-preenchimento-de-caderneta-de-vacinação-1)
+      - [25. Design na Penugem](#25-design-na-penugem-1)
+      - [26. Pagamento com Saco de Algodão](#26-pagamento-com-saco-de-algodão-1)
+      - [27. Pagamento com Galinhas Vivas](#27-pagamento-com-galinhas-vivas-1)
 - [7. Diagrama de componentes](#7-diagrama-de-componentes)
 - [8. Diagrama de Implantação](#8-diagrama-de-implantação)
 - [9. Protótipo de telas](#9-protótipo-de-telas)
@@ -303,6 +362,290 @@ classDiagram
 ## 6.1. Casos de uso
 
 ![Casos de uso](https://raw.githubusercontent.com/4Elber/Elber_Alves/refs/heads/main/Diagrama%20de%20casos%20de%20uso.png?token=GHSAT0AAAAAACW54UQELHX23ENY6Z4GQ2H4ZXTLWOA)
+
+## 6.2. Historia de Usuario
+
+### Clínica Veterinária
+
+#### 1. Cadastro de Cliente e Animal
+**Como** cliente,  
+**Quero** cadastrar meus dados e os dados dos meus animais,  
+**Para** que eu possa receber atendimento na clínica veterinária.
+
+#### 2. Informar Condições do Animal
+**Como** cliente,  
+**Quero** informar as condições nas quais meu animal chega à clínica,  
+**Para** que o veterinário saiba do estado de saúde do meu pet.
+
+#### 3. Informar Tipo de Ração do Animal
+**Como** cliente,  
+**Quero** informar o tipo de ração que meu animal consome,  
+**Para** garantir que o veterinário tenha informações completas sobre sua alimentação.
+
+#### 4. Informar Hábitos do Animal
+**Como** cliente,  
+**Quero** fornecer informações sobre os hábitos do meu animal,  
+**Para** que o veterinário tenha uma visão mais clara do seu comportamento e necessidades.
+
+#### 5. Atendimento por Vários Veterinários
+**Como** cliente,  
+**Quero** que meu animal possa ser atendido por mais de um veterinário,  
+**Para** garantir que ele receba o melhor cuidado possível.
+
+#### 6. Atendimento Agendado
+**Como** cliente,  
+**Quero** agendar o atendimento do meu animal na clínica,  
+**Para** garantir que ele seja atendido conforme a disponibilidade do veterinário.
+
+#### 7. Ficha e Prontuário do Animal
+**Como** veterinário,  
+**Quero** criar uma ficha e prontuário para cada animal atendido,  
+**Para** registrar as informações de saúde e histórico do animal.
+
+#### 8. Agendar Atendimentos Futuros
+**Como** cliente,  
+**Quero** marcar horários de atendimento futuros para meu animal,  
+**Para** garantir que ele tenha acompanhamento contínuo.
+
+#### 9. Receita Após o Atendimento
+**Como** veterinário,  
+**Quero** gerar uma receita após o atendimento do animal,  
+**Para** prescrever o tratamento adequado.
+
+#### 10. Atendimento pelo Atendente
+**Como** atendente,  
+**Quero** verificar a disponibilidade na agenda dos veterinários,  
+**Para** organizar os atendimentos e garantir que o animal seja atendido no horário correto.
+
+#### 11. Fila de Espera
+**Como** atendente,  
+**Quero** colocar o cliente e seu animal na fila de espera,  
+**Para** garantir que o atendimento ocorra quando o veterinário estiver disponível.
+
+#### 12. Entrevista com o Dono do Animal
+**Como** veterinário,  
+**Quero** realizar uma entrevista com o dono do animal,  
+**Para** entender melhor o histórico e as condições do animal.
+
+#### 13. Preencher Formulário com Entrevista
+**Como** veterinário,  
+**Quero** registrar o resultado da entrevista em um formulário,  
+**Para** documentar as informações fornecidas pelo dono do animal.
+
+#### 14. Exame do Animal e Prontuário
+**Como** veterinário,  
+**Quero** examinar o animal e anotar minhas observações em seu prontuário,  
+**Para** manter um registro completo do estado de saúde do animal.
+
+#### 15. Receita Dependendo do Exame
+**Como** veterinário,  
+**Quero** prescrever uma receita conforme o exame do animal,  
+**Para** garantir que ele receba o tratamento necessário.
+
+---
+
+### Petshop
+
+#### 16. Venda de Ração para Pássaros
+**Como** cliente,  
+**Quero** comprar ração para pássaros da espécie gralha,  
+**Para** alimentar adequadamente meu pássaro.
+
+#### 17. Venda de Sal para Boi
+**Como** cliente,  
+**Quero** comprar sal para boi,  
+**Para** suplementar a alimentação dos meus animais.
+
+#### 18. Venda de Vacina para Animais Adultos
+**Como** cliente,  
+**Quero** comprar vacina para animais com mais de 7 anos,  
+**Para** garantir a saúde dos meus pets.
+
+#### 19. Banho e Tosa para Animais de Fazenda
+**Como** cliente,  
+**Quero** que meu animal de fazenda receba banho e tosa,  
+**Para** garantir que ele esteja limpo e bem cuidado.
+
+#### 20. Vacina para Animais com Raiva
+**Como** cliente,  
+**Quero** vacinar meus animais contra raiva,  
+**Para** protegê-los de doenças.
+
+#### 21. Limpeza de Pata de Camelo
+**Como** cliente,  
+**Quero** serviços de limpeza de pata de camelo,  
+**Para** cuidar da higiene do meu camelo.
+
+#### 22. Banho em Gansos da Finlândia
+**Como** cliente,  
+**Quero** dar banho em meus gansos da Finlândia,  
+**Para** mantê-los limpos e saudáveis.
+
+#### 23. Ajuda na Domesticação
+**Como** cliente,  
+**Quero** ajuda na domesticação do meu animal,  
+**Para** melhorar seu comportamento e convivência.
+
+#### 24. Preenchimento de Caderneta de Vacinação
+**Como** cliente,  
+**Quero** que o petshop preencha a caderneta de vacinação do meu animal,  
+**Para** manter o controle das vacinas aplicadas.
+
+#### 25. Design na Penugem
+**Como** cliente,  
+**Quero** que o petshop faça design na penugem do meu animal,  
+**Para** deixá-lo com uma aparência única e estilosa.
+
+#### 26. Pagamento com Saco de Algodão
+**Como** cliente,  
+**Quero** pagar com saco de algodão,  
+**Para** usar um meio alternativo de pagamento aceito pela loja.
+
+#### 27. Pagamento com Galinhas Vivas
+**Como** cliente,  
+**Quero** pagar com galinhas vivas,  
+**Para** trocar produtos ou serviços do petshop por um meio de pagamento aceito.
+### Clínica Veterinária
+
+#### 1. Cadastro de Cliente e Animal
+**Como** cliente,  
+**Quero** cadastrar meus dados e os dados dos meus animais,  
+**Para** que eu possa receber atendimento na clínica veterinária.
+
+#### 2. Informar Condições do Animal
+**Como** cliente,  
+**Quero** informar as condições nas quais meu animal chega à clínica,  
+**Para** que o veterinário saiba do estado de saúde do meu pet.
+
+#### 3. Informar Tipo de Ração do Animal
+**Como** cliente,  
+**Quero** informar o tipo de ração que meu animal consome,  
+**Para** garantir que o veterinário tenha informações completas sobre sua alimentação.
+
+#### 4. Informar Hábitos do Animal
+**Como** cliente,  
+**Quero** fornecer informações sobre os hábitos do meu animal,  
+**Para** que o veterinário tenha uma visão mais clara do seu comportamento e necessidades.
+
+#### 5. Atendimento por Vários Veterinários
+**Como** cliente,  
+**Quero** que meu animal possa ser atendido por mais de um veterinário,  
+**Para** garantir que ele receba o melhor cuidado possível.
+
+#### 6. Atendimento Agendado
+**Como** cliente,  
+**Quero** agendar o atendimento do meu animal na clínica,  
+**Para** garantir que ele seja atendido conforme a disponibilidade do veterinário.
+
+#### 7. Ficha e Prontuário do Animal
+**Como** veterinário,  
+**Quero** criar uma ficha e prontuário para cada animal atendido,  
+**Para** registrar as informações de saúde e histórico do animal.
+
+#### 8. Agendar Atendimentos Futuros
+**Como** cliente,  
+**Quero** marcar horários de atendimento futuros para meu animal,  
+**Para** garantir que ele tenha acompanhamento contínuo.
+
+#### 9. Receita Após o Atendimento
+**Como** veterinário,  
+**Quero** gerar uma receita após o atendimento do animal,  
+**Para** prescrever o tratamento adequado.
+
+#### 10. Atendimento pelo Atendente
+**Como** atendente,  
+**Quero** verificar a disponibilidade na agenda dos veterinários,  
+**Para** organizar os atendimentos e garantir que o animal seja atendido no horário correto.
+
+#### 11. Fila de Espera
+**Como** atendente,  
+**Quero** colocar o cliente e seu animal na fila de espera,  
+**Para** garantir que o atendimento ocorra quando o veterinário estiver disponível.
+
+#### 12. Entrevista com o Dono do Animal
+**Como** veterinário,  
+**Quero** realizar uma entrevista com o dono do animal,  
+**Para** entender melhor o histórico e as condições do animal.
+
+#### 13. Preencher Formulário com Entrevista
+**Como** veterinário,  
+**Quero** registrar o resultado da entrevista em um formulário,  
+**Para** documentar as informações fornecidas pelo dono do animal.
+
+#### 14. Exame do Animal e Prontuário
+**Como** veterinário,  
+**Quero** examinar o animal e anotar minhas observações em seu prontuário,  
+**Para** manter um registro completo do estado de saúde do animal.
+
+#### 15. Receita Dependendo do Exame
+**Como** veterinário,  
+**Quero** prescrever uma receita conforme o exame do animal,  
+**Para** garantir que ele receba o tratamento necessário.
+
+---
+
+### Petshop
+
+#### 16. Venda de Ração para Pássaros
+**Como** cliente,  
+**Quero** comprar ração para pássaros da espécie gralha,  
+**Para** alimentar adequadamente meu pássaro.
+
+#### 17. Venda de Sal para Boi
+**Como** cliente,  
+**Quero** comprar sal para boi,  
+**Para** suplementar a alimentação dos meus animais.
+
+#### 18. Venda de Vacina para Animais Adultos
+**Como** cliente,  
+**Quero** comprar vacina para animais com mais de 7 anos,  
+**Para** garantir a saúde dos meus pets.
+
+#### 19. Banho e Tosa para Animais de Fazenda
+**Como** cliente,  
+**Quero** que meu animal de fazenda receba banho e tosa,  
+**Para** garantir que ele esteja limpo e bem cuidado.
+
+#### 20. Vacina para Animais com Raiva
+**Como** cliente,  
+**Quero** vacinar meus animais contra raiva,  
+**Para** protegê-los de doenças.
+
+#### 21. Limpeza de Pata de Camelo
+**Como** cliente,  
+**Quero** serviços de limpeza de pata de camelo,  
+**Para** cuidar da higiene do meu camelo.
+
+#### 22. Banho em Gansos da Finlândia
+**Como** cliente,  
+**Quero** dar banho em meus gansos da Finlândia,  
+**Para** mantê-los limpos e saudáveis.
+
+#### 23. Ajuda na Domesticação
+**Como** cliente,  
+**Quero** ajuda na domesticação do meu animal,  
+**Para** melhorar seu comportamento e convivência.
+
+#### 24. Preenchimento de Caderneta de Vacinação
+**Como** cliente,  
+**Quero** que o petshop preencha a caderneta de vacinação do meu animal,  
+**Para** manter o controle das vacinas aplicadas.
+
+#### 25. Design na Penugem
+**Como** cliente,  
+**Quero** que o petshop faça design na penugem do meu animal,  
+**Para** deixá-lo com uma aparência única e estilosa.
+
+#### 26. Pagamento com Saco de Algodão
+**Como** cliente,  
+**Quero** pagar com saco de algodão,  
+**Para** usar um meio alternativo de pagamento aceito pela loja.
+
+#### 27. Pagamento com Galinhas Vivas
+**Como** cliente,  
+**Quero** pagar com galinhas vivas,  
+**Para** trocar produtos ou serviços do petshop por um meio de pagamento aceito.
+
 
 ---
 # 7. Diagrama de componentes
