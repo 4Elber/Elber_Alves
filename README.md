@@ -4,12 +4,13 @@ Página da disciplina de Engenharia de Software
 - [Elber\_Alves](#elber_alves)
 - [1. Introdução](#1-introdução)
 - [2. Descrição do sistema](#2-descrição-do-sistema)
-  - [Descrição do cenario onde o sistema deverá funcionar:](#descrição-do-cenario-onde-o-sistema-deverá-funcionar)
+  - [2.1. Descrição do cenario onde o sistema deverá funcionar:](#21-descrição-do-cenario-onde-o-sistema-deverá-funcionar)
 - [3. Visão geral do sistema](#3-visão-geral-do-sistema)
-  - [Descrição do sistema e suas relações](#descrição-do-sistema-e-suas-relações)
+  - [3.1. Descrição do sistema e suas relações](#31-descrição-do-sistema-e-suas-relações)
 - [4. Diagrama ER](#4-diagrama-er)
 - [5. Diagrama de classe](#5-diagrama-de-classe)
 - [6. Casos de uso](#6-casos-de-uso)
+  - [6.1. Casos de uso](#61-casos-de-uso)
 - [7. Diagrama de componentes](#7-diagrama-de-componentes)
 - [8. Diagrama de Implantação](#8-diagrama-de-implantação)
 - [9. Protótipo de telas](#9-protótipo-de-telas)
@@ -31,7 +32,7 @@ O projeto a seguir apresenta um sistema desenvolvido para uma pethop. A empresa 
 ---
 # 2. Descrição do sistema
 
-## Descrição do cenario onde o sistema deverá funcionar:
+## 2.1. Descrição do cenario onde o sistema deverá funcionar:
 
 1. Uma clínica veterinária atende apenas os animais: gatos e cachorros.
 
@@ -96,13 +97,13 @@ O projeto a seguir apresenta um sistema desenvolvido para uma pethop. A empresa 
 ---
 # 3. Visão geral do sistema
 
-## Descrição do sistema e suas relações
+## 3.1. Descrição do sistema e suas relações
 
 ---
 # 4. Diagrama ER
 
 ```python
-print("abc")
+print("Meu Diagrama")
 ```
 
 ```mermaid
@@ -298,6 +299,10 @@ classDiagram
 
 ---
 # 6. Casos de uso
+
+## 6.1. Casos de uso
+
+
 
 ---
 # 7. Diagrama de componentes
