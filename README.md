@@ -73,6 +73,66 @@ Página da disciplina de Engenharia de Software
 - [7. Diagrama de componentes](#7-diagrama-de-componentes)
 - [8. Diagrama de Implantação](#8-diagrama-de-implantação)
 - [9. Protótipo de telas](#9-protótipo-de-telas)
+  - [9.1 Tela de Cadastro de Agenda](#91-tela-de-cadastro-de-agenda)
+    - [9.1.1 Relatório de Agenda](#911-relatório-de-agenda)
+    - [9.1.2 Detalhe de Agenda](#912-detalhe-de-agenda)
+    - [9.1.3 Registro de Agenda](#913-registro-de-agenda)
+  - [9.2 Tela de Cadastro de Animal](#92-tela-de-cadastro-de-animal)
+    - [9.2.1 Relatório de Animal](#921-relatório-de-animal)
+    - [9.2.2 Registro de Animal](#922-registro-de-animal)
+    - [9.2.3 Detalhes de Animal](#923-detalhes-de-animal)
+  - [9.3 Tela de Cadastro de Atendente](#93-tela-de-cadastro-de-atendente)
+    - [9.3.1 Relatório de Atendente](#931-relatório-de-atendente)
+    - [9.3.2 Registro de Atendente](#932-registro-de-atendente)
+    - [9.3.3 Detalhes de Atendente](#933-detalhes-de-atendente)
+  - [9.4 Tela de Cadastro de Atendimento](#94-tela-de-cadastro-de-atendimento)
+    - [9.4.1 Relatório de Atendimento](#941-relatório-de-atendimento)
+    - [9.4.2 Registro de Atendimento](#942-registro-de-atendimento)
+    - [9.4.3 Detalhes de Atendimento](#943-detalhes-de-atendimento)
+  - [9.5 Tela de Cadastro de Cliente](#95-tela-de-cadastro-de-cliente)
+    - [9.5.1 Relatório de Cliente](#951-relatório-de-cliente)
+    - [9.5.2 Detalhe de Cliente](#952-detalhe-de-cliente)
+    - [9.5.3 Registro de Cliente](#953-registro-de-cliente)
+  - [9.6 Tela de Cadastro de Pagamento](#96-tela-de-cadastro-de-pagamento)
+    - [9.6.1 Relatório de Pagamento](#961-relatório-de-pagamento)
+    - [9.6.2 Detalhes de Pagamento](#962-detalhes-de-pagamento)
+    - [9.6.3 Registro de Pagamento](#963-registro-de-pagamento)
+  - [9.7 Tela de Cadastro de Petshop](#97-tela-de-cadastro-de-petshop)
+    - [9.7.1 Relatório de Petshop](#971-relatório-de-petshop)
+    - [9.7.2 Registro de Petshop](#972-registro-de-petshop)
+    - [9.7.3 Detalhes de Petshop](#973-detalhes-de-petshop)
+  - [9.8 Tela de Cadastro de Petshop\_Produtos](#98-tela-de-cadastro-de-petshop_produtos)
+    - [9.8.1 Relatório de Petshop\_Produtos](#981-relatório-de-petshop_produtos)
+    - [9.8.2 Detalhes de Petshop\_Produtos](#982-detalhes-de-petshop_produtos)
+    - [9.8.3 Registro de Petshop\_Produtos](#983-registro-de-petshop_produtos)
+  - [9.9 Tela de Cadastro de Petshop\_Serviços](#99-tela-de-cadastro-de-petshop_serviços)
+    - [9.9.1 Relatório de Petshop\_Serviços](#991-relatório-de-petshop_serviços)
+    - [9.9.2 Detalhes de Petshop\_Serviços](#992-detalhes-de-petshop_serviços)
+    - [9.9.3 Registro de Petshop\_Serviços](#993-registro-de-petshop_serviços)
+  - [9.10 Tela de Cadastro de Produtos](#910-tela-de-cadastro-de-produtos)
+    - [9.10.1 Relatório de Produtos](#9101-relatório-de-produtos)
+    - [9.10.2 Detalhes de Produtos](#9102-detalhes-de-produtos)
+    - [9.10.3 Registro de Produtos](#9103-registro-de-produtos)
+  - [9.11 Tela de Cadastro de Prontuário](#911-tela-de-cadastro-de-prontuário)
+    - [9.11.1 Relatório de Prontuário](#9111-relatório-de-prontuário)
+    - [9.11.2 Detalhes de Prontuário](#9112-detalhes-de-prontuário)
+    - [9.11.3 Registro de Prontuário](#9113-registro-de-prontuário)
+  - [9.12 Tela de Cadastro de Receita](#912-tela-de-cadastro-de-receita)
+    - [9.12.1 Relatório de Receita](#9121-relatório-de-receita)
+    - [9.12.2 Detalhes de Receita](#9122-detalhes-de-receita)
+    - [9.12.3 Registro de Receita](#9123-registro-de-receita)
+  - [9.13 Tela de Cadastro de Serviços](#913-tela-de-cadastro-de-serviços)
+    - [9.13.1 Relatório de Serviços](#9131-relatório-de-serviços)
+    - [9.13.2 Detalhes de Serviços](#9132-detalhes-de-serviços)
+    - [9.13.3 Registro de Serviços](#9133-registro-de-serviços)
+  - [9.14 Tela de Cadastro de Veterinário](#914-tela-de-cadastro-de-veterinário)
+    - [9.14.1 Relatório de Veterinário](#9141-relatório-de-veterinário)
+    - [9.14.2 Detalhes de Veterinário](#9142-detalhes-de-veterinário)
+    - [9.14.3 Registro de Veterinário](#9143-registro-de-veterinário)
+  - [9.15 Tela de Gráfico](#915-tela-de-gráfico)
+    - [9.15.1 Gráfico em Pizza](#9151-gráfico-em-pizza)
+    - [9.15.2 Gráfico em Barra](#9152-gráfico-em-barra)
+  - [9.16 Tela de Dashboard](#916-tela-de-dashboard)
 - [10 Diagrama de navegação](#10-diagrama-de-navegação)
 - [11. Pilha tecnológica](#11-pilha-tecnológica)
 - [12. Requisitos de sistemas](#12-requisitos-de-sistemas)
@@ -655,6 +715,216 @@ classDiagram
 
 ---
 # 9. Protótipo de telas
+
+## 9.1 Tela de Cadastro de Agenda
+
+### 9.1.1 Relatório de Agenda
+
+![agenda](1.jpeg)
+
+### 9.1.2 Detalhe de Agenda
+
+![agenda](2.jpeg)
+
+### 9.1.3 Registro de Agenda
+
+![agenda](3.jpeg)
+
+## 9.2 Tela de Cadastro de Animal
+
+### 9.2.1 Relatório de Animal
+
+![animal](4.jpeg)
+
+### 9.2.2 Registro de Animal
+
+![animal](5.jpeg)
+
+### 9.2.3 Detalhes de Animal
+
+![animal](6.jpeg)
+
+## 9.3 Tela de Cadastro de Atendente
+
+### 9.3.1 Relatório de Atendente
+
+![atendente](7.jpeg)
+
+### 9.3.2 Registro de Atendente
+
+![atendente](8.jpeg)
+
+### 9.3.3 Detalhes de Atendente
+
+![atendente](9.jpeg)
+
+## 9.4 Tela de Cadastro de Atendimento
+
+### 9.4.1 Relatório de Atendimento
+
+![atendimento](10.jpeg)
+
+### 9.4.2 Registro de Atendimento
+
+![atendimento](11.jpeg)
+
+### 9.4.3 Detalhes de Atendimento
+
+![atendimento](12.jpeg)
+
+## 9.5 Tela de Cadastro de Cliente
+
+### 9.5.1 Relatório de Cliente
+
+![cliente](13.jpeg)
+
+### 9.5.2 Detalhe de Cliente
+
+![cliente](14.jpeg)
+
+### 9.5.3 Registro de Cliente
+
+![cliente](15.jpeg)
+
+## 9.6 Tela de Cadastro de Pagamento
+
+### 9.6.1 Relatório de Pagamento
+
+![pagamento](16.jpeg)
+
+### 9.6.2 Detalhes de Pagamento
+
+![pagamento](17.jpeg)
+
+### 9.6.3 Registro de Pagamento
+
+![pagamento](18.jpeg)
+
+## 9.7 Tela de Cadastro de Petshop
+
+### 9.7.1 Relatório de Petshop
+
+![petshop](19.jpeg)
+
+### 9.7.2 Registro de Petshop
+
+![petshop](20.jpeg)
+
+### 9.7.3 Detalhes de Petshop
+
+![petshop](21.jpeg)
+
+## 9.8 Tela de Cadastro de Petshop_Produtos
+
+### 9.8.1 Relatório de Petshop_Produtos
+
+![pet_produtos](22.jpeg)
+
+### 9.8.2 Detalhes de Petshop_Produtos
+
+![pet_produtos](23.jpeg)
+
+### 9.8.3 Registro de Petshop_Produtos
+
+![pet_produtos](24.jpeg)
+
+## 9.9 Tela de Cadastro de Petshop_Serviços
+
+### 9.9.1 Relatório de Petshop_Serviços
+
+![pet_serv](25.jpeg)
+
+### 9.9.2 Detalhes de Petshop_Serviços
+
+![pet_serv](26.jpeg)
+
+### 9.9.3 Registro de Petshop_Serviços
+
+![pet_serv](27.jpeg)
+
+## 9.10 Tela de Cadastro de Produtos
+
+### 9.10.1 Relatório de Produtos
+
+![produtos](28.jpeg)
+
+### 9.10.2 Detalhes de Produtos
+
+![produtos](29.jpeg)
+
+### 9.10.3 Registro de Produtos
+
+![produtos](30.jpeg)
+
+## 9.11 Tela de Cadastro de Prontuário
+
+### 9.11.1 Relatório de Prontuário
+
+![prontuario](31.jpeg)
+
+### 9.11.2 Detalhes de Prontuário
+
+![prontuario](32.jpeg)
+
+### 9.11.3 Registro de Prontuário
+
+![prontuario](33.jpeg)
+
+## 9.12 Tela de Cadastro de Receita
+
+### 9.12.1 Relatório de Receita
+
+![receita](34.jpeg)
+
+### 9.12.2 Detalhes de Receita
+
+![receita](35.jpeg)
+
+### 9.12.3 Registro de Receita
+
+![receita](36.jpeg)
+
+## 9.13 Tela de Cadastro de Serviços
+
+### 9.13.1 Relatório de Serviços
+
+![servicos](37.jpeg)
+
+### 9.13.2 Detalhes de Serviços
+
+![servicos](38.jpeg)
+
+### 9.13.3 Registro de Serviços
+
+![servicos](39.jpeg)
+
+## 9.14 Tela de Cadastro de Veterinário
+
+### 9.14.1 Relatório de Veterinário
+
+![veterinario](40.jpeg)
+
+### 9.14.2 Detalhes de Veterinário
+
+![veterinario](41.jpeg)
+
+### 9.14.3 Registro de Veterinário
+
+![veterinario](42.jpeg)
+
+## 9.15 Tela de Gráfico
+
+### 9.15.1 Gráfico em Pizza
+
+![graficos](43.jpeg)
+
+### 9.15.2 Gráfico em Barra
+
+![graficos](44.jpeg)
+
+## 9.16 Tela de Dashboard
+
+![dashboard](45.jpeg)
 
 ---
 # 10 Diagrama de navegação
