@@ -710,6 +710,8 @@ classDiagram
 ---
 # 7. Diagrama de componentes
 
+![diagrama de componente](PLANTUML%20DIAGRAMA%20DE%20COMPONENTES.png)
+
 ---
 # 8. Diagrama de Implantação
 
