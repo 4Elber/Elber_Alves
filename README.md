@@ -710,7 +710,7 @@ classDiagram
 ---
 # 7. Diagrama de componentes
 
-![diagrama de componente](PLANTUML%20DIAGRAMA%20DE%20COMPONENTES.png)
+![diagrama de componente](https://github.com/4Elber/Elber_Alves/blob/main/PLANTUML%20DIAGRAMA%20DE%20COMPONENTES.png)
 
 ---
 # 8. Diagrama de Implantação
