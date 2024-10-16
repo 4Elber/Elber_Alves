@@ -422,7 +422,7 @@ classDiagram
 
 ## 6.1. Casos de uso
 
-![Casos de uso](Diagrama%20de%20casos%20de%20uso.png)
+![Casos de uso](https://github.com/4Elber/Elber_Alves/blob/main/Diagrama%20de%20casos%20de%20uso.png)
 
 ## 6.2. Historia de Usuario
 
@@ -716,7 +716,7 @@ classDiagram
 ---
 # 8. Diagrama de Implantação
 
-![Diagramação](https://github.com/4Elber/Elber_Alves/blob/main/PLANTUML%20DIAGRAMA%20DE%20IMPLANTACAO.png)
+![Diagrama](https://github.com/4Elber/Elber_Alves/blob/main/PLANTUML%20DIAGRAMA%20DE%20IMPLANTACAO.png)
 ---
 # 9. Protótipo de telas
 
@@ -969,6 +969,44 @@ graph TD
 
 ---
 # 11. Pilha tecnológica
+
+```mermaid
+graph TD
+    subgraph Frontend
+        A1[HTML/CSS] --> A2[JavaScript]
+        A2 --> A3[React.js / Vue.js]
+        A3 --> A4[Axios / Fetch API]
+    end
+
+    subgraph Backend
+        B1[Node.js / Python]
+        B1 --> B2[Express.js / Flask]
+        B2 --> B3[RESTful API]
+        B3 --> B4[Autenticação]
+    end
+
+    subgraph Database
+        C1[MySQL / PostgreSQL]
+        C1 --> C2[ORM]
+    end
+
+    subgraph Infraestrutura
+        D1[Servidor NGINX/Apache]
+        D1 --> D2[Docker / Kubernetes]
+        D2 --> D3[Servidor Web]
+        D2 --> D4[Servidor de Aplicação]
+    end
+
+    subgraph Integrações Externas
+        E1[API de Pagamento]
+        E1 --> E2[Serviços de Notificação]
+    end
+
+    A4 --> B2
+    B2 --> C1
+    B2 --> D1
+    B2 --> E1
+```
 
 ---
 # 12. Requisitos de sistemas
