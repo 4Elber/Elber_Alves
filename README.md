@@ -716,7 +716,7 @@ classDiagram
 ---
 # 8. Diagrama de Implantação
 
-![Diagramação](PLANTUML%20DIAGRAMA%20DE%20IMPLANTACAO.png)
+![Diagramação](https://github.com/4Elber/Elber_Alves/blob/main/PLANTUML%20DIAGRAMA%20DE%20IMPLANTACAO.png)
 ---
 # 9. Protótipo de telas
 
