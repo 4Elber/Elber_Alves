@@ -931,6 +931,40 @@ classDiagram
 ---
 # 10 Diagrama de navegação
 
+```mermaid
+graph TD
+    A[Login] --> B[Menu Principal]
+    
+    B --> C[Cadastro de Cliente]
+    C --> C1[Formulário de Cadastro de Cliente]
+    
+    B --> D[Cadastro de Animal]
+    D --> D1[Formulário de Cadastro de Animal]
+    
+    B --> E[Agenda de Atendimentos]
+    E --> E1[Verificar Disponibilidade de Veterinário]
+    E --> E2[Marcar Atendimento]
+    E --> E3[Fila de Espera]
+    
+    B --> F[Atendimento]
+    F --> F1[Entrevista com Cliente]
+    F --> F2[Exame do Animal]
+    F --> F3[Gerar Receita]
+    F --> F4[Prontuário do Animal]
+    
+    B --> G[Petshop]
+    G --> G1[Venda de Produtos]
+    G1 --> G1a[Alimentos]
+    G1 --> G1b[Vacinas]
+    G1 --> G1c[Banho e Tosa]
+    G --> G2[Serviços Adicionais]
+    
+    B --> H[Pagamento]
+    H --> H1[Pagamento com Dinheiro]
+    H --> H2[Pagamento com Saco de Algodão]
+    H --> H3[Pagamento com Galinhas Vivas]
+```
+
 ---
 # 11. Pilha tecnológica
 
