@@ -8,7 +8,11 @@ Página da disciplina de Engenharia de Software
 - [3. Visão geral do sistema](#3-visão-geral-do-sistema)
   - [3.1. Descrição do sistema e suas relações](#31-descrição-do-sistema-e-suas-relações)
 - [4. Diagrama ER](#4-diagrama-er)
+  - [4.1. Descrição das Entidades e Relacionamentos](#41-descrição-das-entidades-e-relacionamentos)
+  - [4.2. Relacionamentos](#42-relacionamentos)
 - [5. Diagrama de classe](#5-diagrama-de-classe)
+  - [5.1. Descrição das Classes e Relacionamentos](#51-descrição-das-classes-e-relacionamentos)
+  - [5.2. Relacionamentos](#52-relacionamentos)
 - [6. Casos de uso](#6-casos-de-uso)
   - [6.1. Casos de uso](#61-casos-de-uso)
   - [6.2. Historia de Usuario](#62-historia-de-usuario)
@@ -136,12 +140,23 @@ Página da disciplina de Engenharia de Software
 - [10 Diagrama de navegação](#10-diagrama-de-navegação)
 - [11. Pilha tecnológica](#11-pilha-tecnológica)
 - [12. Requisitos de sistemas](#12-requisitos-de-sistemas)
+  - [12.1. Requisitos do Lado Cliente](#121-requisitos-do-lado-cliente)
+  - [12.2. Requisitos do Lado Servidor](#122-requisitos-do-lado-servidor)
 - [13. Considerações sobre segurança](#13-considerações-sobre-segurança)
-- [14. Manutenção e instalação](#14-manutenção-e-instalação)
-- [15. Glossário](#15-glossário)
+  - [13.1. Lado Cliente](#131-lado-cliente)
+  - [13.2. Lado Servidor](#132-lado-servidor)
+- [14. Instalação, Manutenção e Novas funcionalidades](#14-instalação-manutenção-e-novas-funcionalidades)
+  - [14.1. Instalação Servidor](#141-instalação-servidor)
+  - [14.2. Manutenção](#142-manutenção)
+  - [14.3. Novas funcionalidades](#143-novas-funcionalidades)
+- [15. Treinamento](#15-treinamento)
+    - [Treinamento do Lado Usuário](#treinamento-do-lado-usuário)
+    - [Treinamento do Lado Administrador](#treinamento-do-lado-administrador)
 - [16. Script SQL](#16-script-sql)
   - [16.1 Comandos create](#161-comandos-create)
   - [16.2 Comandos INSERT gerando dados ficticios;](#162-comandos-insert-gerando-dados-ficticios)
+    - [16.2.1. Explicação dos dados ficticios](#1621-explicação-dos-dados-ficticios)
+    - [Tabelas do Pet Shop](#tabelas-do-pet-shop)
 
 
 # 1. Introdução
@@ -217,6 +232,18 @@ O projeto a seguir apresenta um sistema desenvolvido para uma pethop. A empresa 
 # 3. Visão geral do sistema
 
 ## 3.1. Descrição do sistema e suas relações
+
+**1. Cadastro de Cliente e Animal**: O sistema permite que o cliente faça o cadastro de si mesmo e de seus animais, informando detalhes essenciais como condições de saúde ao chegar e hábitos alimentares (tipo de ração e comportamentos do animal).
+
+**2. Agendamento e Atendimento de Animais**: O cliente pode marcar atendimentos para seus animais, podendo consultar horários disponíveis com veterinários. O sistema gerencia essa agenda, colocando os animais na fila de espera quando necessário e permitindo agendamentos futuros.
+
+**3. Atendimento Veterinário**: Quando um cliente chega à clínica, ele é recebido por um atendente, que organiza e guia o atendimento. O veterinário realiza uma entrevista com o dono e anota o estado e observações sobre o animal no prontuário, que é registrado eletronicamente. Caso o animal precise, uma receita médica será emitida.
+
+**4. Gerenciamento de Fichas e Prontuários**: Cada animal atendido recebe uma ficha e um prontuário detalhado, que ficam disponíveis no sistema para que os clientes possam acompanhar o histórico médico de seus animais.
+
+**6. Serviços do Pet Shop**: Além do atendimento veterinário, o pet shop oferece uma gama de serviços adicionais para o bem-estar dos animais. Entre os serviços incluem-se venda de ração específica, vacinas para animais adultos, serviços de banho e tosa para animais de fazenda, e serviços de estética como design de penugem.
+
+**7. Pagamento Flexível**: O sistema permite uma variedade de métodos de pagamento, que vão desde os tradicionais até métodos menos convencionais, como pagamento em galinhas vivas ou com saco de algodão.
 
 ---
 # 4. Diagrama ER
@@ -297,6 +324,79 @@ erDiagram
     PETSHOP ||--o{ PRODUTO : "vende"
     CLIENTE ||--o{ PAGAMENTO : "realiza"
 ```
+
+## 4.1. Descrição das Entidades e Relacionamentos
+
+1. **CLIENTE**
+   - Representa o cliente que realiza o cadastro para acessar os serviços veterinários e do pet shop para seus animais.
+
+2. **ANIMAL**
+   - Representa os animais dos clientes, incluindo informações sobre espécie, condição física e hábitos.
+
+3. **VETERINARIO**
+   - Representa o veterinário responsável pelo atendimento dos animais na clínica.
+
+4. **ATENDENTE**
+   - Representa o atendente da clínica veterinária, que auxilia no processo de recepção e organização do atendimento.
+
+5. **ATENDIMENTO**
+   - Representa o processo de atendimento de um animal na clínica, registrando a data, hora e o status do atendimento.
+
+6. **AGENDA**
+   - Representa a agenda de atendimentos da clínica, com horários disponíveis para os veterinários atenderem os animais.
+
+7. **PRONTUARIO**
+   - Representa o prontuário médico do animal, onde o veterinário registra observações sobre o atendimento e o estado de saúde.
+
+8. **RECEITA**
+   - Representa a receita prescrita pelo veterinário, incluindo uma descrição e os medicamentos indicados.
+
+9. **PETSHOP**
+   - Representa o setor de pet shop, com os serviços oferecidos para os animais, como banho, tosa e vacinação.
+
+10. **PRODUTO**
+    - Representa os produtos vendidos pelo pet shop, como rações, vacinas e outros itens para animais.
+
+11. **PAGAMENTO**
+    - Representa os métodos de pagamento aceitos pelo sistema, permitindo a realização de pagamentos por diversos meios.
+
+## 4.2. Relacionamentos
+
+1. **CLIENTE possui ANIMAL**
+   - Um cliente pode ter vários animais cadastrados na clínica.
+
+2. **ANIMAL é atendido por VETERINARIO**
+   - Um animal pode ser atendido por mais de um veterinário e um veterinário pode atender diversos animais.
+
+3. **ATENDENTE realiza ATENDIMENTO**
+   - O atendente é responsável por organizar e encaminhar o atendimento dos animais, podendo realizar vários atendimentos.
+
+4. **CLIENTE solicita ATENDIMENTO**
+   - Um cliente solicita um atendimento para cada um dos animais.
+
+5. **ANIMAL é atendido em ATENDIMENTO**
+   - Cada animal recebe atendimento, podendo ter diversos registros de atendimento na clínica.
+
+6. **ATENDIMENTO gera PRONTUARIO**
+   - Cada atendimento gera um prontuário que registra as observações do veterinário sobre o animal.
+
+7. **PRONTUARIO pode gerar RECEITA**
+   - Dependendo do atendimento, o prontuário pode gerar uma receita com prescrições para o animal.
+
+8. **AGENDA relacionado a ATENDIMENTO**
+   - A agenda organiza os horários disponíveis para que os atendimentos sejam realizados.
+
+9. **CLIENTE utiliza serviços do PETSHOP**
+   - O cliente pode contratar serviços oferecidos pelo pet shop para seus animais, como tosa e vacinação.
+
+10. **PETSHOP oferece serviços para ANIMAL**
+    - O pet shop disponibiliza serviços diversos para os animais cadastrados pelos clientes.
+
+11. **PETSHOP vende PRODUTO**
+    - O pet shop comercializa diversos produtos que os clientes podem adquirir para seus animais.
+
+12. **CLIENTE realiza PAGAMENTO**
+    - O cliente realiza o pagamento dos serviços e produtos através de diferentes formas de pagamento.
 
 ---
 # 5. Diagrama de classe
@@ -415,6 +515,83 @@ classDiagram
     Petshop "1" -- "many" Produto : "vende"
     Petshop "1" -- "many" Servico : "oferece"
 ```
+
+## 5.1. Descrição das Classes e Relacionamentos
+
+1. **Cliente**
+     - Registra um novo animal associado ao cliente.
+     - Registra a condição do animal.
+     - Informa o tipo de ração que o animal consome.
+     - Registra os hábitos do animal.
+
+2. **Animal**
+     - Registra um prontuário para o animal.
+     - Emite uma receita para o animal.
+
+3. **Veterinario**
+     - Realiza o atendimento de um animal.
+     - Realiza entrevista com o dono do animal.
+     - Registra observações no prontuário do animal.
+     - Prescreve uma receita para o animal.
+
+4. **Atendente**
+     - Realiza o atendimento inicial ao cliente.
+     - Consulta a agenda do veterinário para verificar disponibilidade.
+     - Adiciona cliente e animal à fila de espera.
+     - Acompanha o cliente e o animal até o veterinário.
+
+5. **Atendimento**
+     - Agenda um atendimento para o cliente e seu animal com um veterinário.
+     - Realiza o atendimento do cliente e animal.
+
+6. **Agenda**
+     - Verifica a disponibilidade de horário de um veterinário.
+
+7. **Prontuario**
+     - Registra uma observação no prontuário.
+
+8. **Receita**
+     - Prescreve medicamentos na receita.
+
+9. **Petshop**
+     - Registra a venda de um produto.
+     - Oferece um serviço para o animal.
+     - Registra o pagamento de um cliente.
+
+## 5.2. Relacionamentos
+
+1. **Cliente possui Animal**
+   - Um cliente pode ter vários animais cadastrados.
+
+2. **Animal é atendido por Veterinario**
+   - Um animal pode ser atendido por vários veterinários, e um veterinário pode atender diferentes animais.
+
+3. **Atendimento realiza Animal**
+   - Um atendimento pode incluir vários animais.
+
+4. **Atendimento é feito por Veterinario**
+   - Cada atendimento é realizado por um veterinário.
+
+5. **Atendimento é organizado por Atendente**
+   - Cada atendimento é organizado por um atendente.
+
+6. **Atendimento gera Prontuario**
+   - Cada atendimento gera um prontuário para o animal atendido.
+
+7. **Prontuario pode gerar Receita**
+   - Um prontuário pode gerar uma receita, dependendo do caso do animal.
+
+8. **Cliente solicita Atendimento**
+   - O cliente pode solicitar múltiplos atendimentos para diferentes animais.
+
+9. **Agenda tem disponibilidade para Veterinario**
+   - A agenda armazena a disponibilidade dos horários dos veterinários.
+
+10. **Petshop vende Produto**
+    - O pet shop pode vender vários produtos.
+
+11. **Petshop oferece Servico**
+    - O pet shop pode oferecer diversos serviços para os animais dos clientes.
 
 ---
 # 6. Casos de uso
@@ -1010,14 +1187,268 @@ graph TD
 ---
 # 12. Requisitos de sistemas
 
+## 12.1. Requisitos do Lado Cliente
+
+1. **Cadastro de Cliente e Animal**
+   - O cliente deve poder se cadastrar no sistema com seus dados pessoais (nome e telefone).
+   - O cliente deve ser capaz de cadastrar um ou mais animais, fornecendo detalhes como espécie (gato ou cachorro), condição física, tipo de ração e hábitos.
+
+2. **Consulta de Dados Pessoais e de Animais**
+   - O cliente deve poder visualizar e atualizar suas informações pessoais.
+   - O cliente deve poder consultar as informações registradas sobre seus animais.
+
+3. **Agendamento de Atendimento**
+   - O cliente deve poder solicitar e visualizar agendamentos de atendimento para seus animais.
+   - O sistema deve exibir os horários disponíveis para atendimento com veterinários, permitindo que o cliente escolha o horário.
+
+4. **Consulta de Histórico Médico**
+   - O cliente deve poder acessar o histórico de atendimentos de seus animais, incluindo informações do prontuário e observações do veterinário.
+
+5. **Emissão e Consulta de Receitas**
+   - O cliente deve poder visualizar receitas médicas emitidas para seus animais após os atendimentos.
+   - O cliente deve ter acesso a informações detalhadas sobre medicamentos prescritos.
+
+6. **Solicitação de Serviços do Pet Shop**
+   - O cliente deve poder visualizar e solicitar serviços oferecidos pelo pet shop, como banho, tosa, vacinação, etc.
+
+7. **Compra de Produtos**
+   - O cliente deve ter acesso ao catálogo de produtos vendidos pelo pet shop e poder realizar compras.
+
+8. **Pagamento**
+   - O cliente deve poder escolher entre diferentes formas de pagamento oferecidas pela clínica para os serviços e produtos adquiridos.
+   - O cliente deve receber um comprovante ou confirmação de pagamento após a transação.
+
+9. **Notificações e Lembretes**
+   - O sistema deve enviar notificações para o cliente sobre o status do atendimento, lembretes de agendamento, atualizações sobre o histórico médico e receitas dos animais.
+
+## 12.2. Requisitos do Lado Servidor
+
+1. **Gestão de Cadastro de Clientes e Animais**
+   - O servidor deve armazenar e gerenciar o cadastro de clientes e seus respectivos animais, incluindo dados como nome, telefone e informações dos animais (nome, espécie, condição, tipo de ração e hábitos).
+   - Deve permitir atualizações de dados de clientes e animais a qualquer momento.
+
+2. **Gerenciamento de Agendamentos e Agenda de Veterinários**
+   - O servidor deve gerenciar a agenda dos veterinários, incluindo horários disponíveis e atendimentos já agendados.
+   - Deve verificar a disponibilidade de horários e permitir que atendentes e clientes agendem, atualizem ou cancelem atendimentos.
+   - Deve notificar o cliente e o veterinário sobre agendamentos confirmados, lembretes, cancelamentos ou alterações.
+
+3. **Processamento de Atendimento**
+   - O servidor deve gerenciar o fluxo de atendimento, permitindo o registro dos atendimentos e atribuindo o status (por exemplo, "pendente", "em andamento", "concluído").
+   - Deve permitir o registro de observações médicas e prontuários feitos pelo veterinário durante o atendimento.
+
+4. **Gestão de Prontuários e Receitas**
+   - O servidor deve registrar e armazenar prontuários médicos de cada animal, com observações do veterinário sobre o estado de saúde e diagnósticos.
+   - Deve permitir a emissão de receitas pelo veterinário, incluindo medicamentos prescritos, e vinculá-las ao prontuário do animal para consulta futura.
+
+5. **Gerenciamento de Produtos e Serviços do Pet Shop**
+   - O servidor deve armazenar um catálogo de produtos e serviços oferecidos pelo pet shop, incluindo detalhes como nome, tipo, descrição e preço.
+   - Deve permitir o registro de vendas de produtos e a contratação de serviços, registrando detalhes de cada transação.
+
+6. **Gestão de Pagamentos**
+   - O servidor deve processar e armazenar informações sobre pagamentos realizados por clientes, permitindo múltiplas formas de pagamento (por exemplo, cartão, dinheiro, pagamentos alternativos).
+   - Deve emitir confirmações de pagamento para clientes e gerar registros financeiros para o sistema administrativo.
+
+7. **Controle de Usuários e Acessos**
+   - O servidor deve gerenciar o acesso de diferentes tipos de usuários, incluindo clientes, atendentes e veterinários, aplicando permissões específicas para cada perfil.
+   - Deve garantir que apenas usuários autenticados acessem dados e funcionalidades correspondentes aos seus papéis.
+
+8. **Notificações e Alertas**
+   - O servidor deve enviar notificações automáticas sobre agendamentos e lembretes de atendimento.
+   - Deve alertar veterinários e atendentes sobre novos agendamentos e mudanças de status dos atendimentos.
+
+9. **Segurança e Conformidade de Dados**
+   - O servidor deve proteger dados sensíveis dos clientes e garantir o cumprimento das políticas de privacidade e proteção de dados.
+   - Deve garantir que todas as comunicações e transações estejam protegidas por protocolos de segurança, como criptografia de dados.
+
+10. **Relatórios e Histórico**
+    - O servidor deve gerar relatórios para consulta de histórico de atendimentos, receitas emitidas, transações financeiras e registros de produtos e serviços.
+    - Deve permitir a exportação de dados para análises periódicas.
+
 ---
 # 13. Considerações sobre segurança
 
----
-# 14. Manutenção e instalação
+## 13.1. Lado Cliente
+
+1. **Autenticação Segura**
+   - Implementar autenticação por meio de senhas fortes, incluindo requisitos de complexidade (combinação de letras, números e caracteres especiais).
+   - Oferecer autenticação multifator (MFA), como verificação por SMS ou aplicativo autenticador, para adicionar uma camada extra de segurança.
+
+2. **Proteção de Dados Pessoais**
+   - Armazenar localmente apenas o mínimo necessário de dados sensíveis e, sempre que possível, optar por sessões temporárias ou tokens criptografados para acesso ao servidor.
+   - Garantir que dados sensíveis (como informações pessoais e de animais) sejam transmitidos por uma conexão segura (HTTPS).
+
+3. **Controle de Sessão e Logoff Automático**
+   - Implementar tempo limite para sessões inativas, forçando o logoff automático após um período de inatividade para evitar o acesso não autorizado.
+   - Oferecer ao usuário uma opção de logout manual visível para que ele possa encerrar a sessão sempre que desejar.
+
+4. **Validação de Entrada de Dados**
+   - Validar todos os dados inseridos pelo cliente no lado do cliente e do servidor para evitar injeção de código, SQL Injection, e outros ataques.
+   - Utilizar filtros para impedir a inserção de caracteres especiais ou scripts nos campos de entrada de dados.
+
+5. **Proteção contra Phishing e Ataques Man-in-the-Middle (MitM)**
+   - Verificar a autenticidade do servidor através de certificados digitais válidos (HTTPS) para garantir que os clientes estão conectados ao servidor correto.
+   - Orientar os usuários sobre a importância de acessar o sistema apenas por meios oficiais e evitar acessar links de e-mails ou mensagens de fontes desconhecidas.
+
+6. **Armazenamento Seguro de Credenciais e Tokens**
+   - Evitar armazenar senhas ou informações sensíveis no armazenamento local do dispositivo. Para autenticação, utilizar tokens de acesso temporários e protegidos.
+   - Sempre invalidar e renovar tokens em intervalos regulares para garantir que acessos antigos sejam revogados.
+
+7. **Gerenciamento de Permissões e Acesso**
+   - Implementar controles de acesso baseados em função (RBAC) para que os clientes acessem apenas suas informações e operações pertinentes, sem acesso a dados ou funcionalidades administrativas.
+
+8. **Proteção Contra Software Malicioso**
+   - Implementar proteção contra ataques de clickjacking (uso de iframes e overlays maliciosos) e phishing, utilizando configurações de segurança nos navegadores e dispositivos.
+
+9. **Educação e Suporte ao Usuário**
+   - Informar e educar os clientes sobre práticas seguras no uso do sistema, como uso de senhas fortes e boas práticas de segurança.
+   - Disponibilizar um suporte rápido para que os clientes possam denunciar possíveis problemas de segurança ou comportamentos suspeitos.
+
+## 13.2. Lado Servidor
+
+1. **Autenticação e Controle de Acesso**
+   - Implementar autenticação forte para todos os tipos de usuários (clientes, atendentes, veterinários) e garantir o uso de autenticação multifator (MFA) para acessos administrativos.
+   - Implementar um controle de acesso baseado em funções (RBAC), garantindo que cada usuário tenha acesso apenas às funcionalidades e informações necessárias ao seu papel.
+   - Registrar logs de autenticação e atividades de usuários para rastrear acessos e atividades incomuns.
+
+2. **Criptografia de Dados**
+   - Criptografar dados sensíveis tanto em trânsito quanto em repouso. Utilizar HTTPS com certificados SSL/TLS para a transmissão de dados e criptografia AES para o armazenamento de dados sensíveis no banco de dados.
+   - Para informações altamente sensíveis, como senhas e dados de saúde, usar algoritmos de hashing (como bcrypt) com salt, impossibilitando a recuperação direta de senhas.
+
+3. **Validação de Entrada e Prevenção de Injeções**
+   - Implementar validações no lado do servidor para todas as entradas de dados, impedindo ataques de injeção SQL, comandos maliciosos, e scripts que possam comprometer o sistema.
+   - Usar consultas preparadas ou ORM (Object-Relational Mapping) para evitar injeção de SQL.
+
+4. **Proteção contra Ataques de Força Bruta e DDoS**
+   - Implementar limites de tentativas de login com bloqueio temporário após várias tentativas falhas para reduzir o risco de ataques de força bruta.
+   - Usar firewalls e técnicas de rate limiting para limitar o tráfego anômalo e identificar solicitações suspeitas, protegendo contra ataques de negação de serviço (DDoS).
+
+5. **Gerenciamento de Sessão e Expiração de Tokens**
+   - Usar tokens de sessão seguros, como JSON Web Tokens (JWT), e configurá-los com expiração curta, especialmente para sessões de acesso administrativo.
+   - Invalidar tokens antigos e exigir renovação de sessões regularmente para evitar que acessos comprometidos sejam utilizados.
+
+6. **Monitoramento de Segurança e Logs**
+   - Implementar um sistema de monitoramento e análise de logs em tempo real para identificar e responder rapidamente a atividades suspeitas.
+   - Armazenar logs de acesso e atividades administrativas em um ambiente seguro, analisando-os periodicamente para detectar padrões de ameaças.
+
+7. **Backup e Recuperação de Dados**
+   - Implementar backups regulares dos dados para garantir a disponibilidade em caso de incidentes de segurança, como ataques ransomware.
+   - Os backups devem ser armazenados em local seguro e serem criptografados, garantindo que dados sensíveis não sejam comprometidos.
+
+8. **Manutenção Regular e Patching**
+   - Manter todos os softwares, frameworks e sistemas operacionais atualizados para corrigir vulnerabilidades conhecidas e reduzir o risco de exploração.
+   - Realizar testes regulares de segurança e aplicar patches de segurança assim que lançados.
+
+9. **Proteção contra Exposição de Dados e Configurações Inseguras**
+   - Configurar o servidor para evitar a exposição de informações sensíveis e de configurações desnecessárias, como diretórios ou páginas de erro detalhadas.
+   - Desabilitar serviços ou portas desnecessárias e revisar permissões de arquivos para garantir que dados críticos estejam acessíveis apenas por usuários e processos autorizados.
+
+10. **Educação e Treinamento de Equipe**
+    - Treinar a equipe técnica e administrativa sobre práticas de segurança, incluindo o reconhecimento de ameaças e resposta a incidentes.
+    - Fornecer orientação sobre a importância de seguir boas práticas de segurança e políticas de conformidade.
 
 ---
-# 15. Glossário
+# 14. Instalação, Manutenção e Novas funcionalidades
+
+## 14.1. Instalação Servidor
+
+   - Pré-requisitos: Antes da instalação, assegurar que o servidor ou dispositivo onde o sistema será hospedado tenha os requisitos mínimos, incluindo compatibilidade com o sistema operacional, espaço em disco e memória suficientes.
+   - Instalação com Bibliotecas de Terceiros:
+   - Utilizar um gerenciador de pacotes (ex.: npm para JavaScript, pip para Python) para instalar todas as dependências necessárias automaticamente. Criar uma lista de dependências para facilitar atualizações e garantir que versões compatíveis sejam utilizadas.
+   - Configurar bibliotecas de segurança, autenticação, e criptografia, como bcrypt (para hashing de senhas) e JSON Web Tokens (JWT).
+   - Distribuição em Lojas de Aplicativos:
+   - Caso o software tenha uma versão mobile, submetê-la às lojas de aplicativos (Google Play, App Store), observando requisitos específicos de cada plataforma, como revisão de segurança, permissões, e conformidade com políticas de privacidade.
+   - Garantir que atualizações e patches sejam enviados regularmente para manter a aplicação segura e funcional.
+
+## 14.2. Manutenção
+
+**Monitoramento Contínuo**
+   - Implementar um sistema de monitoramento de desempenho, analisando o uso de CPU, memória e consumo de rede.
+   - Monitorar métricas de segurança, como tentativas de login falhadas e atividades suspeitas. Utilizar ferramentas de monitoramento como Prometheus, Grafana ou Nagios.
+**Rodízio de Backup**
+   - Configurar backups automáticos diários e semanais dos dados críticos, com retenção de 30 dias para históricos completos. Realizar backups incrementais entre períodos completos.
+   - Armazenar os backups de forma segura, usando criptografia e mantendo-os em uma localização externa ao servidor principal (ex.: backup na nuvem).
+**Procedimentos de Segurança**
+   - Realizar auditorias de segurança mensais para verificar a conformidade das configurações e eliminar vulnerabilidades.
+   - Manter as bibliotecas e dependências de segurança atualizadas e revisar logs de segurança regularmente para identificar atividades suspeitas.
+**Testes de Comunicação e Alertas**
+   - Realizar testes regulares dos sistemas de comunicação, incluindo notificações por e-mail e push, garantindo que todos os alertas sejam enviados e recebidos corretamente.
+   - Configurar alertas em tempo real para eventos críticos, como falhas de backup, tentativa de invasão, ou erros de servidor, e garantir que a equipe receba notificações imediatas.
+
+## 14.3. Novas funcionalidades
+
+**Formulários de Solicitação de Suporte**
+   - Disponibilizar formulários na plataforma para que os clientes solicitem suporte, detalhando o problema e adicionando capturas de tela, se possível.
+**Formas de Solicitação de Suporte**
+   - Oferecer múltiplos canais de suporte, como e-mail, chat em tempo real e telefone, para atender diferentes necessidades e preferências dos usuários.
+**Critérios de Atendimento**
+   - Estabelecer um SLA (Acordo de Nível de Serviço) com tempos de resposta definidos. Exemplo: consultas sobre pagamento devem ser respondidas em até 24 horas, enquanto questões técnicas críticas devem ser atendidas em até uma hora.
+   - Organizar as solicitações por prioridade (alta, média, baixa), oferecendo suporte mais rápido para problemas que afetam a segurança e disponibilidade do sistema.
+
+---
+# 15. Treinamento
+
+### Treinamento do Lado Usuário
+
+1. **Navegação e Interface**
+   - Familiarização com a interface do sistema: menus, ícones, e fluxos de navegação para facilitar o uso intuitivo.
+   - Identificação rápida de funções comuns, como acesso ao cadastro e registro de atendimentos.
+
+2. **Cadastro e Gerenciamento de Dados**
+   - Procedimentos para cadastrar e atualizar informações de clientes e animais, incluindo:
+     - Dados obrigatórios e opcionais, como informações do animal e condição de saúde.
+     - Como realizar atualizações periódicas ou correções no cadastro.
+
+3. **Agendamentos e Atendimentos**
+   - Processo de realização de agendamentos:
+     - Como consultar disponibilidade e agendar novos atendimentos.
+     - Instruções para gerenciar a fila de espera e reagendar atendimentos.
+   - Informações sobre verificações e confirmações de horários.
+
+4. **Preenchimento de Formulários**
+   - Como preencher corretamente os formulários de atendimento e os prontuários de cada animal.
+   - Diretrizes para adicionar informações como condição, hábitos alimentares e comportamentais, garantindo registros completos.
+
+5. **Suporte e Solicitações**
+   - Instruções sobre o uso do formulário de suporte para comunicar problemas ou dúvidas.
+   - Como enviar solicitações detalhadas (com descrição do problema e anexos, como capturas de tela).
+   - Canais de suporte disponíveis, como chat, e-mail e telefone, e orientações sobre os tipos de solicitações que cada canal atende.
+
+### Treinamento do Lado Administrador
+
+1. **Instalação e Configuração do Sistema**
+   - Procedimentos detalhados para a instalação inicial e configuração de dependências e bibliotecas de terceiros.
+   - Orientações para integrações com sistemas externos e configuração de compatibilidade.
+
+2. **Gestão de Segurança e Controle de Acesso**
+   - Configuração de perfis e controle de acesso para diferentes usuários (clientes, atendentes, veterinários).
+   - Treinamento sobre medidas de segurança, como autenticação multifator (MFA) e monitoração de tentativas de acesso não autorizadas.
+
+3. **Manutenção do Sistema e Backup**
+   - Rodízio de backups automáticos e verificação de integridade dos dados.
+   - Como configurar e verificar backups completos (semanais) e incrementais (diários), além de procedimentos de restore em caso de incidentes.
+   - Configurações de armazenamento seguro para dados críticos, incluindo métodos de criptografia.
+
+4. **Monitoramento do Sistema**
+   - Uso de ferramentas de monitoramento para analisar performance (CPU, memória, rede) e segurança.
+   - Configuração de alertas automáticos para eventos críticos, como tentativas de invasão, falhas de backup e problemas de comunicação.
+   - Procedimentos para auditoria de logs e segurança, incluindo rotinas para identificar e resolver problemas antes que afetem o serviço.
+
+5. **Atualizações e Patches**
+   - Processo de atualização regular de software e dependências, incluindo medidas de segurança.
+   - Instruções para aplicar atualizações fora do horário de pico, minimizando interrupções.
+
+6. **Plano de Contingência**
+   - Treinamento sobre a execução do plano de contingência em casos de incidentes, incluindo backups de emergência e recuperação de dados.
+   - Procedimentos para ativação do plano e resposta rápida para manter a continuidade de negócios.
+
+7. **Monitoramento de Procedimentos e Logs**
+   - Verificação regular da quantidade e do armazenamento de logs para evitar acúmulo excessivo.
+   - Garantir a retenção e exclusão de logs conforme políticas de retenção de dados, minimizando riscos de armazenamento desnecessário.
+
+8. **Critérios de Suporte e Atendimento**
+   - Definição de SLAs (Acordos de Nível de Serviço) e critérios para priorização de chamados:
+     - Exemplos: problemas de segurança (prioridade alta), erros operacionais (média), dúvidas de navegação (baixa).
+   - Procedimentos para resposta rápida a solicitações críticas e treinamento para oferecer atendimento eficaz.
 
 ---
 # 16. Script SQL
@@ -1268,3 +1699,57 @@ INSERT INTO Pagamento (forma_pagamento, cliente_id) VALUES
 ('galinhas vivas', 3),
 ('saco de algodão', 4);
 ```
+### 16.2.1. Explicação dos dados ficticios
+
+1. **CLIENTE**
+   - Armazena informações básicas dos clientes, como **NOME** e **TELEFONE**. Exemplo: **João Silva** com o telefone **123456789**.
+
+2. **ANIMAL**
+   - Contém os detalhes dos animais associados aos clientes, incluindo **NOME**, **ESPECIE** (gato ou cachorro), **CONDIÇÃO** de saúde, **TIPO DE RAÇÃO**, e **HABITOS**. Cada animal é associado a um **CLIENTE**.  
+   - Exemplo: **Rex**, um cachorro com leve dor na pata e alimentação com "Ração Premium", pertence ao cliente **João Silva**.
+
+3. **VETERINARIO**
+   - Registra os veterinários da clínica, incluindo **NOME** e **ESPECIALIDADE**. Exemplo: **Dr. Pedro Costa** é especialista em **Clínica geral**.
+
+4. **ATENDENTE**
+   - Armazena o **NOME** dos atendentes que auxiliam os clientes no atendimento e organização de consultas. Exemplo: **Carla Santos** é uma das atendentes.
+
+5. **AGENDA**
+   - Armazena os horários e datas disponíveis de cada veterinário para agendamento, identificados pelo **VETERINARIO**. 
+   - Exemplo: **17/09/2024 às 10:00** está reservado para o **Dr. Pedro Costa**.
+
+6. **ATENDIMENTO**
+   - Registra os atendimentos realizados ou agendados, incluindo **DATA**, **HORA** e **STATUS** (Concluído, Em andamento ou Agendado), e as associações com **CLIENTE**, **ANIMAL**, **ATENDENTE** e **AGENDA**.
+   - Exemplo: Em **17/09/2024 às 10:00**, o atendimento foi realizado para **Rex** e concluído por **Carla Santos**.
+
+7. **PRONTUARIO**
+   - Contém anotações e observações feitas pelo veterinário para cada atendimento. Associado com **ANIMAL** e **ATENDIMENTO**.
+   - Exemplo: Para o animal **Rex**, foi registrada uma leve inflamação na pata, e recomendada fisioterapia.
+
+8. **RECEITA**
+   - Registra receitas médicas, com **DESCRIÇÃO** do tratamento e **PRODUTOS** prescritos. Cada receita está vinculada a um prontuário específico.
+   - Exemplo: Receita para **Rex** com fisioterapia semanal e uso de anti-inflamatório duas vezes ao dia.
+
+### Tabelas do Pet Shop
+
+1. **PETSHOP**
+   - Armazena informações de pet shops associados, como **nome**. Exemplo: **Petshop AnimalCare**.
+
+2. **PRODUTO**
+   - Contém informações sobre produtos disponíveis para venda, com **nome** e **TIPO** (ração, sal, vacina).
+   - Exemplo: **Ração para pássaros da espécie gralha** e **Sal para boi**.
+
+3. **SERVICO**
+   - Registra os serviços oferecidos pelo pet shop, com a **DESCRIÇÃO** de cada um. 
+   - Exemplo: **Banho e tosa para animais de fazenda** e **Vacina para animais com raiva**.
+
+4. **PETSHOP_SERVICO**
+   - Relaciona o pet shop com os serviços oferecidos, associando **PETSHOP** com **SERVIÇOS**.
+   - Exemplo: **Petshop AnimalCare** oferece os serviços de **banho e tosa** e **limpeza de pata de camelo**.
+
+5. **PETSHOP_PRODUTO**
+   - Relaciona o pet shop com os produtos disponíveis, associando **PETSHOP** com **PRODUTOS**.
+   - Exemplo: **Petshop AnimalCare** vende **vacina para animais adultos acima de 7 anos**.
+
+6. **PAGAMENTO**
+   - Registra o método de pagamento usado por cada cliente. Exemplo: **João Silva** pagou em **dinheiro**, enquanto **Carlos Pereira** usou **galinhas vivas**.
